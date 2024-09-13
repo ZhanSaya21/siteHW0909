@@ -1,38 +1,331 @@
-.App {
-  text-align: center;
-}
+/* * {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.siteHeader {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 28;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 65px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 60px rgb(0 0 0);
+}
+
+.siteHeader a:hover {
+  text-decoration: underline;
+}
+.adds {
+  padding: 80px;
+}
+
+.cardFrontStyle {
+  background: black;
+  color: rgb(30, 131, 219);
+  width: 100%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+.cardBackStyle {
+  background: black;
+  color: rgb(30, 131, 219);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardList {
+  display: flex;
+}
+
+.cardsGalery {
+  display: flex;
+  transform: translateX(100px);
+  transform: translate3d(1024px, 0, 0);
+  -webkit-animation: 25s linear 0s infinite normal none running walk;
+  animation: 25s linear 0s infinite normal none running walk;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.cardsGalery-item {
+  padding: 35px;
+  background-color: rgb(15, 169, 66);
+  color: blue;
+}
+
+.cardsGalery-item:focus,
+.cardsGalery-item:hover {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: yellow;
+  color: blue;
+}
+
+.cardsGalery:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes walk {
+  5% {
+    transform: translate3d(1024px, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+
+  12% {
+    transform: translate3d(972px, 0, 0);
   }
+
+  18% {
+    transform: translate3d(856px, 0, 0);
+  }
+
+  23% {
+    transform: translate3d(659px, 0, 0);
+  }
+
+  28% {
+    transform: translate3d(474px, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(317px, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(190px, 0, 0);
+  }
+
+  47% {
+    transform: translate3d(101px, 0, 0);
+  }
+
+  54% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  68% {
+    transform: translate3d(-400px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-600px, 0, 0);
+  }
+
+  82% {
+    transform: translate3d(-800px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-1000px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-1200px, 0, 0);
+  }
+}
+
+@keyframes walk {
+  5% {
+    transform: translate3d(1024px, 0, 0);
+  }
+
+  12% {
+    transform: translate3d(972px, 0, 0);
+  }
+
+  18% {
+    transform: translate3d(856px, 0, 0);
+  }
+
+  23% {
+    transform: translate3d(659px, 0, 0);
+  }
+
+  28% {
+    transform: translate3d(474px, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(317px, 0, 0);
+  }
+
+  40% {
+    transform: translate3d(190px, 0, 0);
+  }
+
+  47% {
+    transform: translate3d(101px, 0, 0);
+  }
+
+  54% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(-200px, 0, 0);
+  }
+
+  68% {
+    transform: translate3d(-400px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-600px, 0, 0);
+  }
+
+  82% {
+    transform: translate3d(-800px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(-1000px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-1200px, 0, 0);
+  }
+}
+
+.footerSocials__item {
+  display: block;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.2s ease-out;
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1.07vw;
+}
+
+.footerSocials__item--fb {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-f_mobile.png);
+}
+
+.footerSocials__item--fb:active,
+.footerSocials__item--fb:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-f_mobile.png);
+}
+
+.footerSocials__item--fb:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--vk {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-vk_mobile.png);
+}
+
+.footerSocials__item--vk:active,
+.footerSocials__item--vk:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-vk_mobile.png);
+}
+
+.footerSocials__item--vk:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--twt {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-t_mobile.png);
+}
+
+.footerSocials__item--twt:active,
+.footerSocials__item--twt:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-t_mobile.png);
+}
+
+.footerSocials__item--twt:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--insta {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-i_mobile.png);
+}
+
+.footerSocials__item--insta:active,
+.footerSocials__item--insta:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-i_mobile.png);
+}
+
+.footerSocials__item--insta:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--mru {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-m_mobile.png);
+}
+
+.footerSocials__item--mru:active,
+.footerSocials__item--mru:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-m_mobile.png);
+}
+
+.footerSocials__item--mru:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--ok {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-ok_mobile.png);
+}
+
+.footerSocials__item--ok:active,
+.footerSocials__item--ok:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-ok_mobile.png);
+}
+
+.footerSocials__item--ok:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--yt {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-you_mobile.png);
+}
+
+.footerSocials__item--yt:active,
+.footerSocials__item--yt:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-you_mobile.png);
+}
+
+.footerSocials__item--yt:hover {
+  text-decoration: none;
+}
+
+.footerSocials__item--teleg {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-telegram.png);
+}
+
+.footerSocials__item--teleg:active,
+.footerSocials__item--teleg:focus {
+  background-image: url(https://static.cdn-kaspi.kz/kkz/mainmvc/reswp/img/socialIco/i-telegram.png);
+}
+
+.footerSocials__item--teleg:hover {
+  text-decoration: none;
 }
